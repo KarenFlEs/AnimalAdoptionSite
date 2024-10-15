@@ -1,0 +1,39 @@
+<%- include('partials/header') %>
+
+<h2 style="text-align: center;">Browse Available Pets</h2>
+
+<% if (pets.length > 0) { %>
+    <% pets.forEach (pet => { %>
+    <div class="animal-container">
+        <div class="animal-image">
+            <img src="/images/<%= pet.imageUrl %>" alt="Image of <%= pet.name %>">
+            <!--Image from https://www.petplan.co.uk/pet-information/cat/breed/ragdoll/-->
+            <!--Image from https://www.petmd.com/dog/breeds/german-shepherd-->
+            <!--Image from https://rawznaturalpetfood.com/norwegian-forest-cat/-->
+            <!--Image from https://www.weenect.com/ie/en/guide/dog-breeds/beagle/-->
+        </div>
+        <div class="animal-description">
+                <h2><%= pet.name %></h2>
+                <ul style="padding-left: 30px; list-style-type: circle;">
+                    <li><%= pet.animal %></li>
+                    <li><%= pet.breed %></li>
+                    <li><%= pet.age %> years old</li>
+                    <li><%= pet.gender %></li>
+                    <li>Gets along with: 
+                        <% if (pet.getsAlong && pet.getsAlong.length > 0) { %>
+                            <%= pet.getsAlong.join(', ') %>
+                        <% } else { %>
+                            No specific requirements
+                        <% } %>
+                    </li>
+                    <li><%= pet.praiseComment %></li>
+                </ul><br>
+                <input type="button"  class="interested-button" name="interestedAnimal" value="Interested">
+        </div>
+    </div>
+    <% }); %>
+    <% } else { %> 
+        <p>No pets found matching your criteria</p>
+    <% } %> 
+
+<%- include('partials/footer') %>

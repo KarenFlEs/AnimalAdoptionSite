@@ -1,0 +1,87 @@
+<h2 style="text-align: center;">Have a pet to give away?</h2>
+
+<form action="/haveAPetToGive" method="post" name="GivePetForm" onsubmit="return validateGivePetForm()">
+    <fieldset style="background-color: white;">
+        <legend>Give Away For Adoption Form</legend>
+
+        <label>Animal:</label>
+        <label> <input type = "radio" name = "animal" value = "cat">
+            Cat
+        </label>
+        <label> <input type = "radio" name = "animal" value = "dog">
+            Dog
+        </label> <br> <br> 
+
+        <label for="breed">Breed of dog or cat:</label>
+        <select id = "breed" name = "breed">
+            <option value="Shihpoo"> Shih-Poo - Shih Tzu & Poodle Mix</option>
+            <option value="German Shepherd"> German Shepherd</option>
+            <option value="Bulldog"> Bulldog </option>
+            <option value="Golden Retriever"> Golden Retriever </option>
+            <option value="Chihuahua"> Chihuahua </option>
+            <option value="Beagle"> Beagle </option>
+            <option value="Siberian Husky"> Siberian Husky </option>
+            <option value="Sphynx Cat"> Sphynx Cat </option>
+            <option value="Ragdoll"> Ragdoll </option>
+            <option value="Mainecoon"> Maine Coon </option>
+            <option value="Norwegian Forest"> Norwegian Forest Cat </option>
+            <option value="Persian Cat"> Persian Cat </option>
+            <option value="Thai Siamese"> Thai Siamese </option>
+            <option value="American Shorthair"> American Shorthair mix</option>    
+        </select><br> <br> 
+
+        <label for="age">Age:</label>
+        <select id="age" name = "age">
+            <option value="0to4"> 0 to 4 years old </option>
+            <option value="5to8"> 5 to 8 years old </option>
+            <option value="9to13"> 9 to 13 years old </option>
+        </select>
+        <br> <br> 
+
+        <label>Gender:</label>
+        <label> <input type = "radio" name = "gender" value = "female">
+            Female
+        </label>
+        <label> <input type = "radio" name = "gender" value = "male">
+            Male
+        </label> <br> <br> 
+
+        <label>Does it get along with the following?</label><br>
+        <label> <input type = "checkbox" name = "getsAlong[]" value = "gets along other dogs">
+            Other Dogs
+        </label>
+        <label> <input type = "checkbox" name = "getsAlong[]" value = "gets along other cats">
+            Other Cats
+        </label>
+        <label> <input type = "checkbox" name = "getsAlong[]" value = "doensnt get along other animals">
+            None
+        </label><br><br>
+
+
+        <label>Are they suitable for a family with a small children?:</label><br>
+        <label> <input type = "radio" name = "suitableChildren" value = "suitable for children">
+            Yes
+        </label>
+        <label> <input type = "radio" name = "suitableChildren" value = "not suitable for children">
+            No
+        </label><br> <br> 
+
+        <label>Comment on how great the animal putting up for adoption is</label><br>
+        <textarea id="praiseComment" name="praiseComment" rows="4" cols = "50"></textarea>
+        <br><br>
+
+        <label><i>Current Owner's Name</i></label><br>
+        <label for="ownerFamilyName">Family name: </label>
+        <input type = "text" id = "ownerFamilyName" name = "ownerFamilyName">
+        <label for="ownerGivenName">Given name </label>
+        <input type = "text" id = "ownerGivenName" name = "ownerGivenName">
+        <br> <br> 
+
+        <label for="ownerEmail">Current Owner's Email </label>
+        <input type = "text" id = "ownerEmail" name = "ownerEmail">
+        <br><br>
+
+        <input type = "submit" value = "Submit">
+        <input type = "reset" value = "Clear">
+    </fieldset>
+</form>

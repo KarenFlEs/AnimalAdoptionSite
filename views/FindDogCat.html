@@ -1,0 +1,71 @@
+<h2 style="text-align: center;">Find a dog/cat</h2>
+<form action="/findDogCat" method="post" name="FindForm" onsubmit="return validateFindForm()">
+    <fieldset style="background-color: white;">
+        <legend>Find Dog/Cat Form</legend>
+
+        <label>Animal:</label>
+        <label> <input type = "radio" name = "animal" value = "Cat">
+            Cat
+        </label>
+        <label> <input type = "radio" name = "animal" value = "Dog">
+            Dog
+        </label> <br> <br> 
+
+        <label for="breed">Breed of dog or cat:</label>
+        <select id="breed" name = breed>
+            <option value="DoesntMatter"> Doesn't Matter </option>
+            <option value="German Shepherd"> German Shepherd</option>
+            <option value="Bulldog"> Bulldog </option>
+            <option value="Golden Retriever"> Golden Retriever </option>
+            <option value="Chihuahua"> Chihuahua </option>
+            <option value="Beagle"> Beagle </option>
+            <option value="Siberian Husky"> Siberian Husky </option>
+            <option value="Shihpoo"> Shih-Poo - Shih Tzu & Poodle Mix</option>
+            <option value="Sphynx Cat"> Sphynx Cat </option>
+            <option value="Ragdoll"> Ragdoll </option>
+            <option value="Maine Coon"> Maine Coon </option>
+            <option value="Norwegian Forest"> Norwegian Forest</option>
+            <option value="Persian Cat"> Persian Cat </option>
+            <option value="Thai Siamese"> Thai Siamese </option>
+            <option value="American Shorthair"> American Shorthair mix</option>
+        </select>
+        <br> <br> 
+
+        <label for="age">Prefered age of animal:</label>
+        <select id="age" name = age>
+            <option value="0to4"> 0 to 4 years old </option>
+            <option value="5to8"> 5 to 8 years old </option>
+            <option value="9to13"> 9 to 13 years old </option>
+            <option value="DoesntMatter"> Doesn't Matter </option>
+        </select>
+        <br> <br> 
+
+        <label>Prefered Gender:</label>
+        <label> <input type = "radio" name = "gender" value = "Female">
+            Female
+        </label>
+        <label> <input type = "radio" name = "gender" value = "Male">
+            Male
+        </label> 
+        <label> <input type = "radio"  name = "gender" value = "DoesntMatter">
+            Doesn't Matter
+        </label><br> <br> 
+
+        <label>Does it need to get along with the following?</label><br>
+        <label> <input type = "checkbox" name = "getsAlong[]" value = "other dogs">
+            Other Dogs
+        </label>
+        <label> <input type = "checkbox" name = "getsAlong[]" value = "other cats">
+            Other Cats
+        </label>
+        <label> <input type = "checkbox" name = "getsAlong[]" value = "small childrens">
+            Small Children
+        </label>
+        <label> <input type = "checkbox"  name = "getsAlong[]" value = "DoesntMatter">
+            Doesn't Matter
+        </label><br> <br> 
+
+        <input type = "submit" value = "Submit">
+        <input type = "reset" value = "Clear">
+    </fieldset>
+</form>

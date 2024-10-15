@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="/css/AdoptionCenter_Styles.css">
+    <script src="/js/AdoptionCenter_Javascript.js" defer></script>
+</head>
+
+<body>
+    <header class="w3-container">
+        <table>
+            <tr>
+                <td><h1>Karen's Adoption Center</h1></td>
+                <td><a href = "/"
+                    target = "_self">
+                    <img class="logo" src= "images/AnimalLogo.png"
+                        alt = "image of Animal Logo"></a>
+                         <!--Logo Credit: https://www.hiclipart.com/free-transparent-background-png-clipart-otyux-->
+                </td>
+                <td><div id="currentDateTime"></div></td>
+            </tr>
+        </table>
+    </header>
+
+    <div class="section">
+        <nav class="w3-center"> <br>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/findDogCat">Find a dog/cat</a></li>
+                <li><a href="/catCare">Cat Care</a></li>
+                <li><a href="/dogCare">Dog Care</a></li>
+                <li><a href="/createAccount">Create an account</a></li>
+                <% if (user){ %>
+                    <li><a href="/haveAPetToGive">Have a pet to give away</a></li>
+                    <li><a href="/logout">Log Out</a></li>
+                <% } else { %>
+                    <li><a href="/login">Have a pet to give away</a></li>
+                <% } %>
+                <li><a href="/contactUs">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+        <article>
